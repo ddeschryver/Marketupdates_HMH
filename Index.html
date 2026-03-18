@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EduStaff Market Intelligence Brief — March 17, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --green-deep:    #1B4D2E;
+    --green-mid:     #2E7D4F;
+    --green-bright:  #3DA668;
+    --green-light:   #A8D5B5;
+    --green-pale:    #E8F5ED;
+    --green-xpale:   #F3FAF5;
+    --gold:          #C9A84C;
+    --gold-light:    #F0E0A8;
+    --clover:        #4CAF50;
+    --white:         #FFFFFF;
+    --text-dark:     #1A2E1F;
+    --text-mid:      #3A5A40;
+    --text-muted:    #6B8F72;
+    --border:        #C2DEC9;
+    --hot-red:       #C0392B;
+    --warm-amber:    #D97706;
+    --cool-blue:     #1D6B9E;
+    --page-bg:       #F3FAF5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 300;
+    background: var(--page-bg);
+    color: var(--text-dark);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* ── SHAMROCK WATERMARK ─── */
+  body::before {
+    content: '☘';
+    position: fixed;
+    bottom: -40px;
+    right: -20px;
+    font-size: 320px;
+    color: rgba(46,125,79,0.05);
+    pointer-events: none;
+    z-index: 0;
+    line-height: 1;
+  }
+
+  /* ── HEADER ─── */
+  .header {
+    background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 60%, var(--green-bright) 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M30 0c2 8-2 14-8 16 6 2 10 8 8 16-2-8-8-12-14-10 6-2 8-8 6-14 2 6 8 8 8 8s-6-2-8-8c8 2 14-2 8-8zm0 0'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .header-inner {
+    position: relative;
+    z-index: 1;
+    padding: 48px 60px 40px;
+    border-bottom: 4px solid var(--gold);
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+  }
+
+  .brand-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .logo-box {
+    background: var(--gold);
+    color: var(--green-deep);
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    padding: 9px 16px;
+    line-height: 1;
+  }
+
+  .brand-text {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+  }
+
+  .stpatricks-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 14px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  .memo-title {
+    font-family: 'Lora', serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .memo-subtitle {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .memo-meta {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 5px 14px;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.88);
+  }
+
+  .meta-lbl {
+    font-size: 9.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    font-weight: 700;
+    padding-top: 2px;
+  }
+
+  .meta-val {
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-bottom: 4px;
+  }
+
+  /* ── BODY ─── */
+  .body {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 52px 52px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── INTRO ─── */
+  .intro-block {
+    background: white;
+    border-left: 5px solid var(--green-mid);
+    padding: 26px 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 12px rgba(27,77,46,0.08);
+  }
+
+  .intro-block p { color: var(--text-mid); margin-bottom: 10px; font-size: 15px; }
+  .intro-block p:last-child { margin-bottom: 0; }
+
+  .dashboard-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--green-mid);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid var(--green-light);
+    padding-bottom: 1px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+  }
+  .dashboard-link:hover { border-color: var(--green-mid); }
+
+  /* ── STATS BAR ─── */
+  .stats-bar {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 44px;
+    background: var(--border);
+  }
+
+  .stat-block {
+    flex: 1;
+    background: white;
+    padding: 18px 20px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Lora', serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-num.green { color: var(--green-mid); }
+  .stat-num.gold  { color: var(--gold); }
+  .stat-num.dark  { color: var(--green-deep); }
+  .stat-num.red   { color: var(--hot-red); }
+
+  .stat-lbl {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  /* ── STAFFING SPOTLIGHT ─── */
+  .spotlight {
+    background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+    color: white;
+    padding: 24px 30px;
+    margin-bottom: 44px;
+    border-left: 5px solid var(--gold);
+  }
+
+  .spotlight-title {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .spotlight p {
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.7;
+  }
+
+  .spotlight strong { color: var(--gold-light); }
+
+  /* ── SECTION DIVIDER ─── */
+  .section-label {
+    font-size: 9.5px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    font-weight: 700;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* ── STATE HEADER ─── */
+  .state-section { margin-bottom: 48px; }
+
+  .state-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--green-deep);
+  }
+
+  .state-clover { color: var(--green-bright); font-size: 18px; }
+
+  .state-name {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--green-deep);
+  }
+
+  .focus-tag {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 2px 8px;
+    background: var(--green-deep);
+    color: var(--gold-light);
+  }
+
+  .state-count {
+    margin-left: auto;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* ── CARDS ─── */
+  .card {
+    background: white;
+    border: 1px solid var(--border);
+    margin-bottom: 14px;
+    padding: 20px 24px;
+    position: relative;
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 18px rgba(27,77,46,0.1); }
+
+  .card.hot   { border-left: 4px solid var(--hot-red); }
+  .card.warm  { border-left: 4px solid var(--warm-amber); }
+  .card.cool  { border-left: 4px solid var(--cool-blue); }
+  .card.staffing-alert { border-left: 4px solid var(--green-mid); background: var(--green-xpale); }
+
+  /* ── CARD META ─── */
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 8px;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+
+  .chip {
+    font-size: 9.5px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 2px 8px;
+  }
+
+  .chip.issue  { background: var(--green-deep); color: white; }
+  .chip.level  { background: var(--gold); color: var(--green-deep); }
+  .chip.date   { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
+  .chip.sub-relevant { background: var(--green-bright); color: white; }
+
+  .score-pill {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+  .dot-1 { background: #6B9DC2; }
+  .dot-2 { background: var(--warm-amber); }
+  .dot-3 { background: var(--hot-red); }
+  .lbl-1 { color: #6B9DC2; }
+  .lbl-2 { color: var(--warm-amber); }
+  .lbl-3 { color: var(--hot-red); }
+
+  .district-line {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 7px;
+  }
+
+  /* ── CONTENT ─── */
+  .card-content {
+    font-size: 14.5px;
+    color: var(--text-mid);
+    line-height: 1.72;
+  }
+
+  .why-matters {
+    font-weight: 700;
+    color: var(--green-deep);
+    font-style: italic;
+  }
+
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--green-mid);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 8px;
+    border-bottom: 1px solid var(--green-light);
+  }
+  .source-link:hover { border-color: var(--green-mid); }
+
+  /* ── SOUNDBYTE ─── */
+  .soundbyte-row {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green-pale);
+    padding: 8px 12px;
+    border-left: 3px solid var(--green-bright);
+    font-size: 12.5px;
+    color: var(--green-deep);
+    font-weight: 600;
+  }
+
+  .soundbyte-row a {
+    color: var(--green-mid);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid var(--green-light);
+  }
+  .soundbyte-row a:hover { border-color: var(--green-mid); }
+
+  .camera-icon { font-size: 16px; }
+
+  /* ── ALERT BOX ─── */
+  .alert-box {
+    margin-top: 12px;
+    padding: 11px 14px;
+    background: rgba(46,125,79,0.06);
+    border-left: 3px solid var(--green-mid);
+    font-size: 13.5px;
+    color: var(--green-deep);
+  }
+
+  .alert-box::before {
+    content: '☘ EduStaff Signal: ';
+    font-weight: 700;
+    color: var(--green-mid);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .alert-box.hot-alert {
+    background: rgba(192,57,43,0.05);
+    border-left-color: var(--hot-red);
+  }
+  .alert-box.hot-alert::before {
+    content: '⚑ EduStaff Alert: ';
+    color: var(--hot-red);
+  }
+
+  /* ── FEDERAL SECTION ─── */
+  .federal-banner {
+    background: linear-gradient(90deg, var(--green-deep), var(--green-mid));
+    color: white;
+    padding: 4px 14px;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: -2px;
+  }
+
+  /* ── FOOTER ─── */
+  .footer {
+    margin-top: 60px;
+    padding-top: 22px;
+    border-top: 3px solid var(--green-deep);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .footer-brand {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--green-deep);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .clover-divider {
+    text-align: center;
+    color: var(--green-light);
+    font-size: 18px;
+    letter-spacing: 8px;
+    margin: 28px 0 6px;
+  }
+
+  @media (max-width: 700px) {
+    .header-inner { padding: 28px 22px 26px; }
+    .memo-title { font-size: 28px; }
+    .body { padding: 28px 18px 60px; }
+    .stats-bar { flex-wrap: wrap; }
+    .stat-block { min-width: 45%; }
+    .header-top { flex-direction: column; gap: 10px; }
+  }
+
+  @media print {
+    body { background: white; }
+    body::before { display: none; }
+    .card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════ -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div class="brand-row">
+        <div class="logo-box">EduStaff</div>
+        <div class="brand-text">Education Staffing Intelligence</div>
+      </div>
+      <div class="stpatricks-badge">☘ &nbsp;St. Patrick's Day Edition &nbsp;· &nbsp;March 17, 2026</div>
+    </div>
+
+    <div class="memo-title">Market Intelligence<br/>Briefing</div>
+    <div class="memo-subtitle">Teacher Staffing &amp; Education Policy — Two-Week Trend Report</div>
+
+    <div class="memo-meta">
+      <span class="meta-lbl">To</span>
+      <span class="meta-val">Derek Vogel, Geoffrey Kartes, Chad Bilkey, Brian Dunn &amp; the EduStaff Team</span>
+      <span class="meta-lbl">From</span>
+      <span class="meta-val">Whiteboard Advisors — Market Intelligence Team</span>
+      <span class="meta-lbl">Date</span>
+      <span class="meta-val">March 17, 2026 ☘</span>
+      <span class="meta-lbl">Re</span>
+      <span class="meta-val">Actionable Staffing, Teacher &amp; Budget Developments — March 3–17, 2026</span>
+      <span class="meta-lbl">Focus</span>
+      <span class="meta-val">WI · FL · TX · MI · GA · OH &nbsp;|&nbsp; Teachers &amp; Budget Issues All States</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════
+     BODY
+══════════════════════════════════════════════ -->
+<main class="body">
+
+  <!-- INTRO -->
+  <div class="intro-block">
+    <p>Happy St. Patrick's Day! 🍀 This brief covers education policy and staffing market signals rated <strong>actionable (Bad-Good score 3)</strong> from <strong>March 3–17, 2026</strong>. Entries span EduStaff's six primary markets (WI, FL, TX, MI, GA, OH), plus all <strong>Teacher</strong> and <strong>Budget</strong> items with Cold-Hot scores of 2 or 3 nationally — and every item with a <strong>SoundByte video/audio commentary</strong> from Whiteboard Advisors.</p>
+    <p>Items are organized by state and issue, with <strong>☘ EduStaff Signals</strong> on high-heat entries explaining direct relevance to substitute teacher and staffing services.</p>
+    <p style="margin-top:12px;">
+      <a class="dashboard-link" href="https://prod-useast-a.online.tableau.com/t/whiteboardinsights/views/TheEducationTrendReport/TheTrendReport" target="_blank">
+        ☘ Visit the Whiteboard Advisors Market Insights Dashboard →
+      </a>
+    </p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-block">
+      <div class="stat-num dark">18</div>
+      <div class="stat-lbl">Total Items</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num red">8</div>
+      <div class="stat-lbl">In Focus Markets</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num green">7</div>
+      <div class="stat-lbl">Teacher Issues</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num gold">3</div>
+      <div class="stat-lbl">SoundByte Videos</div>
+    </div>
+  </div>
+
+  <!-- STAFFING SPOTLIGHT -->
+  <div class="spotlight">
+    <div class="spotlight-title">☘ EduStaff Staffing Spotlight — Week of March 17</div>
+    <p>The substitute teacher shortage is reaching a legislative tipping point. <strong>Illinois lawmakers are advancing a bill to allow retired teachers to work more substitute hours</strong> — with 87% of surveyed districts reporting teacher shortages and 91% struggling to fill substitute positions. Meanwhile, <strong>Michigan launched a new ECE teacher apprenticeship pipeline</strong>, and states from Louisiana to Colorado are advancing teacher pay legislation. These signals collectively point to a tightening labor market — and growing urgency for districts to secure reliable staffing partners like EduStaff.</p>
+  </div>
+
+  <div class="section-label">State-by-State Briefings — Focus Markets First</div>
+
+  <!-- ══════════════════
+       FLORIDA (Focus)
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-clover">☘</span>
+      <span class="state-name">Florida</span>
+      <span class="focus-tag">EduStaff Market</span>
+      <span class="state-count">1 item</span>
+    </div>
+
+    <div class="card cool">
+      <div class="card-meta">
+        <span class="chip level">Level: District</span>
+        <span class="chip issue">Assessment</span>
+        <span class="chip date">March 16, 2026</span>
+        <div class="score-pill"><span class="dot dot-1"></span><span class="lbl-1">Actionable Score: 1</span></div>
+      </div>
+      <div class="district-line">FL, Broward County Public Schools</div>
+      <div class="card-content">
+        Broward County Public Schools reported a 5% increase in midyear FAST (Florida Assessment of Student Thinking) scores across reading, math, and writing. District leaders said the gains continue a three-year improvement trend, with approximately 25,000 students moving from below grade level to at or above proficiency — progress officials hope will attract more students despite declining enrollment and budget pressures.
+        <br/><a class="source-link" href="https://www.nbcmiami.com/news/local/broward-public-schools-test-scores-on-upward-trend/3778758/" target="_blank">Read Full Story →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════
+       GEORGIA (Focus)
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-clover">☘</span>
+      <span class="state-name">Georgia</span>
+      <span class="focus-tag">EduStaff Market</span>
+      <span class="state-count">1 item</span>
+    </div>
+
+    <div class="card hot">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">Reading</span>
+        <span class="chip date">March 16, 2026</span>
+        <div class="score-pill"><span class="dot dot-3"></span><span class="lbl-3">Actionable Score: 3</span></div>
+      </div>
+      <div class="district-line">Georgia — State Level</div>
+      <div class="card-content">
+        The Georgia House approved a $38.5 billion state budget through House Bill 974 that includes $60.8 million for literacy initiatives. The funding supports House Bill 1193, which would place literacy coaches in elementary schools and provide $15,000 grants to districts for vision and hearing screening equipment. The proposal also includes funding for university enrollment growth, expanded pre-K, and summer meals for children.
+        <br/><a class="source-link" href="https://georgiarecorder.com/briefs/georgia-house-passes-budget-with-nearly-61-million-for-literacy-coaches/" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="alert-box hot-alert">Georgia's $60.8M literacy coach initiative will require districts to onboard and place specialized instructional staff — EduStaff should proactively engage Georgia district HR leaders.</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════
+       MICHIGAN (Focus)
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-clover">☘</span>
+      <span class="state-name">Michigan</span>
+      <span class="focus-tag">EduStaff Market</span>
+      <span class="state-count">4 items</span>
+    </div>
+
+    <div class="card warm">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">Nutrition</span>
+        <span class="chip date">March 16, 2026</span>
+        <div class="score-pill"><span class="dot dot-2"></span><span class="lbl-2">Actionable Score: 2</span></div>
+      </div>
+      <div class="district-line">Michigan — State Level</div>
+      <div class="card-content">
+        The Michigan Department of Education announced continuation of free summer meals for children through the Summer Food Service Program in 2026, serving children 18 and under at community sites and via a take-home option for rural families. Michigan served nearly 9 million meals to children last summer.
+        <br/><a class="source-link" href="https://www.michigan.gov/mde/news-and-information/press-releases/2026/03/05/mi-continue-offer-free-summer-food-2026" target="_blank">Read Full Story →</a>
+      </div>
+    </div>
+
+    <div class="card hot">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">Reading</span>
+        <span class="chip date">March 16, 2026</span>
+        <div class="score-pill"><span class="dot dot-3"></span><span class="lbl-3">Actionable Score: 3</span></div>
+      </div>
+      <div class="district-line">Michigan — State Level</div>
+      <div class="card-content">
+        Michigan education leaders promoted the "Every Child Reads" literacy strategy and Governor Whitmer's proposed <strong>$625 million literacy investment</strong> in the FY 2027 budget. The proposal would expand early learning programs, train more teachers in science-of-reading practices through LETRS, add literacy coaches, and provide tutoring and out-of-school learning supports to strengthen reading outcomes statewide.
+        <br/><a class="source-link" href="https://www.michigan.gov/mde/news-and-information/press-releases/2026/03/13/state-education-leaders-highlight-every-child-reads-investments" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="alert-box">Michigan's $625M literacy investment will create demand for hundreds of trained reading interventionists and literacy coaches — a direct staffing pipeline opportunity for EduStaff in MI.</div>
+    </div>
+
+    <div class="card hot">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">STEM</span>
+        <span class="chip date">March 16, 2026</span>
+        <div class="score-pill"><span class="dot dot-3"></span><span class="lbl-3">Actionable Score: 3</span></div>
+      </div>
+      <div class="district-line">Michigan — State Level</div>
+      <div class="card-content">
+        Michigan's MiSTEM Network launched a $1.75 million expansion of its Playbook Mini Grant program, awarding $800,000 to 17 public education agencies for place-, project-, and problem-based STEM learning. Supported by a $1 million contribution from General Motors, the initiative funds teacher training, student programs, and partnerships — especially in underserved and rural communities.
+        <br/><a class="source-link" href="https://www.michigan.gov/leo/news/2026/03/09/mistem-launches-stem-expansion-to-advance-stem-education-statewide" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="alert-box">STEM expansion in 17 Michigan school agencies creates demand for specialized STEM-credentialed substitute and instructional staff — a niche EduStaff can fill.</div>
+    </div>
+
+    <div class="card hot staffing-alert">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">Teachers</span>
+        <span class="chip sub-relevant">⭐ Staffing Relevant</span>
+        <span class="chip date">March 16, 2026</span>
+        <div class="score-pill"><span class="dot dot-3"></span><span class="lbl-3">Actionable Score: 3</span></div>
+      </div>
+      <div class="district-line">Michigan — State Level</div>
+      <div class="card-content">
+        Michigan launched the <strong>MiEarly Apprentice program</strong> to address teacher shortages tied to expanding free pre-K programs including the Great Start Readiness Program. The initiative pays childcare workers and paraprofessionals while they earn credentials to become lead early childhood teachers. The state estimates it needs thousands more educators to meet growing demand from universal pre-K expansion.
+        <br/><a class="source-link" href="https://www.abc12.com/news/education/new-michigan-program-aims-to-train-retain-more-early-childhood-teachers/article_068c645d-dba2-5006-ab3b-8ef59ca663f1.html" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="alert-box hot-alert">Michigan's ECE teacher pipeline acknowledges a shortage of thousands — while apprentices train, districts still need daily coverage. EduStaff's substitute and paraprofessional placement services are critical bridge solutions here.</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════
+       TEXAS (Focus)
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-clover">☘</span>
+      <span class="state-name">Texas</span>
+      <span class="focus-tag">EduStaff Market</span>
+      <span class="state-count">2 items</span>
+    </div>
+
+    <div class="card hot">
+      <div class="card-meta">
+        <span class="chip level">Level: District</span>
+        <span class="chip issue">CTE</span>
+        <span class="chip date">March 11, 2026</span>
+        <div class="score-pill"><span class="dot dot-3"></span><span class="lbl-3">Actionable Score: 3 (Cold-Hot)</span></div>
+      </div>
+      <div class="district-line">TX, Harlingen CISD</div>
+      <div class="card-content">
+        <span class="why-matters">Hot Take: Look into this — board will be presenting the "classroom to commerce" concept at the National School Board Association conference.</span> Community member Gloria Casas addressed the board advocating for the continuation and expansion of CTE programs, particularly the masonry program. She shared that Governor Abbott personally invited her to the State of the State address where he designated CTE as an emergency legislative item. Casas also highlighted Harlingen's national recognition through SkillsUSA attendance and urged the board to welcome community partnerships in building CTE programming.
+        <br/><a class="source-link" href="https://youtu.be/ipFfP6TnI4c" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="soundbyte-row">
+        <span class="camera-icon">🎥</span>
+        <span>Whiteboard Advisors SoundByte:</span>
+        <a href="https://fast.wistia.net/embed/iframe/j9y69rhtzx" target="_blank">Watch Video Commentary →</a>
+      </div>
+      <div class="alert-box">TX Governor designating CTE as emergency legislation drives rapid program expansion — EduStaff should position CTE-credentialed staffing solutions for Texas districts.</div>
+    </div>
+
+    <div class="card warm">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">Curriculum</span>
+        <span class="chip date">March 16, 2026</span>
+        <div class="score-pill"><span class="dot dot-2"></span><span class="lbl-2">Actionable Score: 2</span></div>
+      </div>
+      <div class="district-line">Texas — State Level</div>
+      <div class="card-content">
+        West Texas A&amp;M University and Texas Southern University received nearly $2 million from the U.S. Department of Education through the American History and Civics National Activities grant to expand civics education ahead of the nation's 250th anniversary. The project will develop a civics curriculum, offer teacher seminars, and create undergraduate courses — with approximately 150 teachers and 100 students participating over three years.
+        <br/><a class="source-link" href="https://www.myplainview.com/canyon/article/wt-texas-southern-wins-2-million-grant-promote-22073204.php" target="_blank">Read Full Story →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════
+       WISCONSIN (Focus)
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-clover">☘</span>
+      <span class="state-name">Wisconsin</span>
+      <span class="focus-tag">EduStaff Market</span>
+      <span class="state-count">1 item</span>
+    </div>
+
+    <div class="card warm">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">Graduation</span>
+        <span class="chip date">March 16, 2026</span>
+        <div class="score-pill"><span class="dot dot-2"></span><span class="lbl-2">Actionable Score: 2</span></div>
+      </div>
+      <div class="district-line">Wisconsin — State Level</div>
+      <div class="card-content">
+        Wisconsin's four-year high school graduation rate reached a record <strong>91.1%</strong> for the 2023–24 school year — the highest since tracking began in 2009–10. The release also showed chronic absenteeism declining to 17.7% and attendance rising to 92.4%, while officials noted ongoing disparities in graduation outcomes among different student groups.
+        <br/><a class="source-link" href="https://dpi.wi.gov/news/releases/2025/graduation-rates-wisconsin-underly-wisedash" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="alert-box">Record graduation and attendance gains in WI signal stable district performance — a strong environment to deepen EduStaff's substitute and support staffing relationships statewide.</div>
+    </div>
+  </div>
+
+  <div class="clover-divider">☘ ☘ ☘</div>
+  <div class="section-label">Teacher &amp; Budget Issues — All States (Cold-Hot 2–3)</div>
+
+  <!-- ══════════════════
+       ARKANSAS — Teachers
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-name">Arkansas</span>
+      <span class="state-count">1 item</span>
+    </div>
+
+    <div class="card warm staffing-alert">
+      <div class="card-meta">
+        <span class="chip level">Level: District</span>
+        <span class="chip issue">Teachers</span>
+        <span class="chip sub-relevant">⭐ Staffing Relevant</span>
+        <span class="chip date">March 11, 2026</span>
+        <div class="score-pill"><span class="dot dot-2"></span><span class="lbl-2">Actionable Score: 2</span></div>
+      </div>
+      <div class="district-line">AR, Siloam Springs School District</div>
+      <div class="card-content">
+        Siloam Springs School Board approved a new 2026–2027 salary schedule allocating approximately $950,000 in raises to retain teachers and support staff. Beginning teacher base pay will increase by $1,000; starting wages will rise to $16/hr for paraprofessionals, $20 for bus drivers, and $15 for cafeteria workers. District leaders cite lagging wages funded through expected property tax revenue increases and organizational restructuring.
+        <br/><a class="source-link" href="https://www.5newsonline.com/article/news/local/siloam-springs-school-district-increasing-pay-retain-staff/527-6759e6d8-c041-407f-aa2d-0831ac8eff14" target="_blank">Read Full Story →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════
+       COLORADO — Teachers
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-name">Colorado</span>
+      <span class="state-count">1 item</span>
+    </div>
+
+    <div class="card warm">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">Teachers</span>
+        <span class="chip date">March 16, 2026</span>
+        <div class="score-pill"><span class="dot dot-2"></span><span class="lbl-2">Actionable Score: 2</span></div>
+      </div>
+      <div class="district-line">Colorado — State Level</div>
+      <div class="card-content">
+        Colorado lawmakers are considering Senate Bill 139, the <strong>Building Excellent Teacher and Employee Residences (BETER) Act</strong>, which would create a grant program to help school districts build affordable rental housing for educators. The proposal would leverage $40 million from the state public school fund into approximately $500 million in total financing, using rent revenue to sustain projects aimed at improving teacher recruitment and retention.
+        <br/><a class="source-link" href="https://coloradosun.com/2026/03/16/colorado-education-bills-2026-legislative-session/" target="_blank">Read Full Story →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════
+       ILLINOIS — Teachers (SUBSTITUTE FOCUS)
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-name">Illinois</span>
+      <span class="state-count">1 item</span>
+    </div>
+
+    <div class="card hot staffing-alert">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">Teachers</span>
+        <span class="chip sub-relevant">⭐ SUBSTITUTE FOCUS</span>
+        <span class="chip date">March 11, 2026</span>
+        <div class="score-pill"><span class="dot dot-2"></span><span class="lbl-2">Actionable Score: 2</span></div>
+      </div>
+      <div class="district-line">Illinois — State Level</div>
+      <div class="card-content">
+        State Senator Mike Halpin's bill would allow retired Illinois teachers to work additional hours as substitutes — introduced as <strong>87% of surveyed IL districts report teacher shortages</strong> and <strong>91% struggle to fill substitute positions</strong>. The legislation directly acknowledges that substitute teacher availability is at crisis levels across the state.
+        <br/><a class="source-link" href="https://www.wqad.com/article/news/local/the-current/halpin-senate-bill-illinois-substitute-teachers-shortages-retired-return/526-c90245ec-d59b-4f79-a692-f8265df8b643" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="alert-box hot-alert">Illinois' 91% substitute shortage rate is a direct market signal for EduStaff. This legislation underscores the urgency — districts are legislating workarounds because they cannot fill positions. EduStaff should target IL districts immediately.</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════
+       LOUISIANA — Teachers
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-name">Louisiana</span>
+      <span class="state-count">2 items</span>
+    </div>
+
+    <div class="card warm staffing-alert">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">Teachers</span>
+        <span class="chip sub-relevant">⭐ Staffing Relevant</span>
+        <span class="chip date">March 11, 2026</span>
+        <div class="score-pill"><span class="dot dot-2"></span><span class="lbl-2">Actionable Score: 2</span></div>
+      </div>
+      <div class="district-line">Louisiana — State Level</div>
+      <div class="card-content">
+        Governor Jeff Landry proposed a constitutional amendment to provide permanent salary increases of $2,250 for teachers and $1,125 for support staff, funded by paying down debt in the Teachers' Retirement System of Louisiana. The proposal does not raise taxes and is tied to Amendment 3, which voters will consider in a May 16 statewide election.
+        <br/><a class="source-link" href="https://cw39.com/news/education/gov-landry-proposes-amendment-to-create-permanent-pay-raise-for-teachers/" target="_blank">Read Full Story →</a>
+      </div>
+    </div>
+
+    <div class="card warm staffing-alert">
+      <div class="card-meta">
+        <span class="chip level">Level: District</span>
+        <span class="chip issue">Teachers</span>
+        <span class="chip sub-relevant">⭐ Staffing Relevant</span>
+        <span class="chip date">March 11, 2026</span>
+        <div class="score-pill"><span class="dot dot-2"></span><span class="lbl-2">Actionable Score: 2</span></div>
+      </div>
+      <div class="district-line">LA, Jefferson Parish</div>
+      <div class="card-content">
+        A Jefferson Parish School Board member proposed requiring the superintendent to develop a plan to increase teacher and staff salaries by 5–10%. Jefferson Parish's average salary trails neighboring parishes and the statewide average. The board is expected to vote April 1, with a salary plan due May 6 if approved.
+        <br/><a class="source-link" href="https://www.wwltv.com/article/news/local/jefferson-parish-school-board-member-proposes-plan-to-raise-teacher-pay/289-12cf0c47-5455-4d36-abd4-aeccc1cd2f14" target="_blank">Read Full Story →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════
+       NEW HAMPSHIRE — Budget
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-name">New Hampshire</span>
+      <span class="state-count">1 item — Budget</span>
+    </div>
+
+    <div class="card hot">
+      <div class="card-meta">
+        <span class="chip level">Level: District</span>
+        <span class="chip issue">Budget</span>
+        <span class="chip date">March 16, 2026</span>
+        <div class="score-pill"><span class="dot dot-3"></span><span class="lbl-3">Actionable Score: 3</span></div>
+      </div>
+      <div class="district-line">NH, Westmoreland School District</div>
+      <div class="card-content">
+        Westmoreland voters approved a $4,628,340 school district operating budget for 2026–27, a 2.9% increase from the prior year, along with a new open enrollment policy allowing up to 10 out-of-district students to attend K–8 while restricting outbound transfers. Officials said the limits help retain local education funding and avoid higher costs tied to student transfers under New Hampshire state law.
+        <br/><a class="source-link" href="https://www.keenesentinel.com/news/local/education/westmoreland-voters-adopt-4-6m-school-district-budget/article_f46f6019-f83f-47a9-99fa-8480517470db.html" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="alert-box">Approved budget with open enrollment growth signals an expanding district — budget certainty creates favorable conditions for initiating EduStaff staffing conversations in NH.</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════
+       NEW MEXICO — Teachers
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-name">New Mexico</span>
+      <span class="state-count">1 item</span>
+    </div>
+
+    <div class="card hot staffing-alert">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">Teachers</span>
+        <span class="chip sub-relevant">⭐ Staffing Relevant</span>
+        <span class="chip date">March 11, 2026</span>
+        <div class="score-pill"><span class="dot dot-3"></span><span class="lbl-3">Actionable Score: 3</span></div>
+      </div>
+      <div class="district-line">New Mexico — State Level</div>
+      <div class="card-content">
+        House Bill 47, signed into law, requires the state to cover <strong>80% of educators' health insurance premiums</strong> to help recruit and retain teachers — a landmark financial benefit designed to make New Mexico more competitive in the national teacher labor market and directly address persistent workforce challenges.
+        <br/><a class="source-link" href="https://sourcenm.com/2026/03/09/new-mexico-gov-michelle-lujan-grisham-signs-literacy-special-education-bills-into-law/" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="alert-box hot-alert">Even with this major benefit, NM still faces teacher shortages — the state is investing heavily to attract permanent teachers, but interim and substitute staffing gaps remain critical. EduStaff should watch NM district-level needs closely.</div>
+    </div>
+  </div>
+
+  <div class="clover-divider">☘ ☘ ☘</div>
+  <div class="section-label">SoundByte Watch — Whiteboard Advisors Video &amp; Audio Commentary</div>
+
+  <!-- ══════════════════
+       SOUNDBYTE: US Federal — LGBTQ+
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="federal-banner">Federal</span>
+      <span class="state-name" style="margin-left:10px;">U.S. — Federal Level</span>
+      <span class="state-count">SoundByte</span>
+    </div>
+
+    <div class="card hot">
+      <div class="card-meta">
+        <span class="chip level">Level: Federal</span>
+        <span class="chip issue">LGBTQ+</span>
+        <span class="chip date">March 4, 2026</span>
+        <div class="score-pill"><span class="dot dot-3"></span><span class="lbl-3">Cold-Hot: 3</span></div>
+      </div>
+      <div class="district-line">US — Federal Level</div>
+      <div class="card-content">
+        <span class="why-matters">Hot Take: Quick video overview here →</span> The U.S. Supreme Court temporarily blocked California policies that generally prevent schools from disclosing a student's transgender status to parents without the student's consent. The majority said the parents challenging the policy are likely to succeed on religious-rights claims and that parents have a role in decisions affecting their children's well-being. The ruling pauses the policies while lower courts continue litigation.
+        <br/><a class="source-link" href="https://www.nytimes.com/2026/03/02/us/politics/supreme-court-california-trans-students.html" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="soundbyte-row">
+        <span class="camera-icon">🎥</span>
+        <span>Whiteboard Advisors SoundByte:</span>
+        <a href="https://fast.wistia.net/embed/iframe/crqn727bwa" target="_blank">Watch Video Commentary →</a>
+      </div>
+      <div class="alert-box hot-alert">Supreme Court ruling creates new policy compliance considerations for school districts nationwide — EduStaff should ensure its substitute and staff briefings reflect current legal standards.</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════
+       SOUNDBYTE: New York — SPED
+  ══════════════════ -->
+  <div class="state-section">
+    <div class="state-header">
+      <span class="state-name">New York</span>
+      <span class="state-count">SoundByte</span>
+    </div>
+
+    <div class="card warm">
+      <div class="card-meta">
+        <span class="chip level">Level: State</span>
+        <span class="chip issue">SPED</span>
+        <span class="chip sub-relevant">⭐ Staffing Relevant</span>
+        <span class="chip date">March 6, 2026</span>
+        <div class="score-pill"><span class="dot dot-2"></span><span class="lbl-2">Actionable Score: 2</span></div>
+      </div>
+      <div class="district-line">New York — State Level</div>
+      <div class="card-content">
+        New York school budgets are at all-time highs, yet the needs of students have never been greater, according to the New York Council of School Superintendents. In Syracuse, the school district reports 8% more special education students than a decade ago. SPED staffing requires specialized knowledge and credentialed professionals — a challenge districts nationwide are facing as IEP caseloads grow.
+        <br/><a class="source-link" href="https://spectrumlocalnews.com/nys/central-ny/news/2026/03/05/school-budgets-swell-and-special-education-needs-surge" target="_blank">Read Full Story →</a>
+      </div>
+      <div class="soundbyte-row">
+        <span class="camera-icon">🎥</span>
+        <span>Whiteboard Advisors SoundByte:</span>
+        <a href="https://fast.wistia.net/embed/iframe/wfi49x8rcl" target="_blank">Watch Video Commentary →</a>
+      </div>
+      <div class="alert-box">Surging SPED enrollment with growing budget pressures creates intense demand for SPED-credentialed substitute and paraprofessional staff — a core EduStaff service opportunity in NY and similar markets.</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <div class="footer-brand">EduStaff ☘ Market Intelligence</div>
+      <div style="margin-top:4px;">Powered by Whiteboard Advisors · March 17, 2026</div>
+    </div>
+    <div style="text-align:right;">
+      <div>Confidential — For Internal Use Only</div>
+      <div style="margin-top:4px;">Happy St. Patrick's Day! ☘</div>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>
